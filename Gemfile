@@ -22,5 +22,6 @@ group :development do
   gem 'guard-rails', require: false
   gem 'guard-rspec', require: false
   gem 'rb-readline'
+  gem 'terminal-notifier-guard'
 end
 
