@@ -2,6 +2,5 @@
 
 == Import users
 
-```ruby
-rake 'import:users[the_task/csv/user_data.csv]'
-```
+<tt>rake "import:users[the_task/csv/user_data.csv]"</tt>
+
