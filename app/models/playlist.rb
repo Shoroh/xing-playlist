@@ -4,4 +4,5 @@ class Playlist < ActiveRecord::Base
   has_many :songs, through: :playlist_songs
 
   validates :name, presence: true
+  validates :name, length: { maximum: 200 }
 end
