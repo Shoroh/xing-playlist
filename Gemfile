@@ -25,3 +25,7 @@ group :development do
   gem 'terminal-notifier-guard'
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 3.1'
+end
+
