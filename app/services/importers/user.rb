@@ -7,7 +7,6 @@ class Importers::User
     @errors = []
     @log = ActiveSupport::Logger.new(File.new('log/import/users.log', 'w'))
     @start_time = Time.zone.now
-    @users_count = ::User.count
   end
 
   def import
@@ -22,7 +21,7 @@ class Importers::User
   end
 
   def errors_messages
-    @errors.each {|error| puts error }
+    @errors.join("\n")
   end
 
   def has_error?
@@ -43,6 +42,7 @@ class Importers::User
     end_time = Time.zone.now
     duration = (end_time - @start_time) / 1.second
     @log.info "Import finished at #{end_time} and last #{duration} seconds."
+    @log.info "Imported #{@counter} users."
     @log.close
   end
 

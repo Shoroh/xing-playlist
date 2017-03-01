@@ -10,9 +10,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'slim-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :development do
