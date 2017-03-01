@@ -1,0 +1,17 @@
+h1 Users list
+
+= page_entries_info @users
+
+table#users_table.table.table-striped
+  thead
+    tr
+      th id
+      th First Name
+      th Last Name
+      th Email
+      th Username
+  tbody
+    = render partial: 'user', collection: @users
+
+= paginate @users, theme: 'twitter-bootstrap-4'
+

@@ -4,14 +4,14 @@ describe Importers::User do
   subject { Importers::User }
 
   context 'cvs file is valid' do
-    let(:csv_file) { File.join(Rails.root, 'spec/support/csv/users', 'valid_users.csv') }
+    let(:valid_users_csv_file) { File.join(Rails.root, 'spec/support/csv/users', 'valid_users.csv') }
 
     it 'imports new users from the file' do
-      expect { subject.new(csv_file).import }.to change(User, :count).by(2)
+      expect { subject.new(valid_users_csv_file).import }.to change(User, :count).by(2)
     end
   end
 
-  context 'cvs file is not valid' do
+  context 'csv file is not valid' do
     let(:not_uniq_csv_file) do
       File.join(Rails.root, 'spec/support/csv/users', 'not_uniq_users.csv')
     end
