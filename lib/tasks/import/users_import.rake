@@ -6,6 +6,6 @@ namespace :import do
     importer.import
     puts importer.errors_messages if importer.has_error?
     puts "Imported #{importer.counter} users"
-    puts 'See logs here for details —> log/import/users.log'
+    puts 'See logs here for details —> log/import_csv.log'
   end
 end
