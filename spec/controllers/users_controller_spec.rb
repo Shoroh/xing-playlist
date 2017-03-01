@@ -7,8 +7,8 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'GET #index' do
     let!(:users) { create_list(:user, 10) }
-    let(:first_five_users) { users.last(5) }
-    let(:last_five_users) { users.first(5) }
+    let(:first_five_users) { User.ordered.first(5) }
+    let(:last_five_users) { User.ordered.last(5) }
 
     before do
       get :index

@@ -17,6 +17,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'oj'
+gem 'oj_mimic_json'
 
 group :development, :test do
   gem 'byebug'
@@ -25,6 +28,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'capybara'
   gem 'poltergeist'
+  gem 'json_spec'
 end
 
 group :development do

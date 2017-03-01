@@ -2,8 +2,8 @@ require 'acceptance_helper'
 
 feature 'Users list' do
   given!(:users) { create_list(:user, 10) }
-  given(:first_five_users) { users.last(5) }
-  given(:last_five_users) { users.first(5) }
+  given(:first_five_users) { User.ordered.first(5) }
+  given(:last_five_users) { User.ordered.last(5) }
 
   scenario 'Guest sees the users list' do
     visit '/'
