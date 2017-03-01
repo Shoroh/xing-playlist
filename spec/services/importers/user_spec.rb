@@ -38,8 +38,8 @@ describe Importers::User do
       importer = subject.new(invalid_data_csv_file)
       importer.import
       expect(importer.has_error?).to be_truthy
-      expect(importer.errors_messages).to include("User #1 — First name is too long (maximum is 200 characters)")
-      expect(importer.errors_messages).to include("User #2 — Email can't be blank and User name is too long (maximum is 200 characters)")
+      expect(importer.errors_messages).to include("Record #1 — First name is too long (maximum is 200 characters)")
+      expect(importer.errors_messages).to include("Record #2 — Email can't be blank and User name is too long (maximum is 200 characters)")
     end
   end
 end
