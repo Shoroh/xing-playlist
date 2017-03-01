@@ -1,6 +1,6 @@
 class Importers::Base
   def initialize(csv_file)
-    @csv_file = CSV.foreach(csv_file, encoding: 'ISO-8859-1', headers: true, header_converters: :symbol)
+    @csv_file = CSV.foreach(csv_file, encoding: 'utf-8', headers: true, header_converters: :symbol)
     @counter = 0
     @errors = []
     @log = ActiveSupport::Logger.new(File.new('log/import_csv.log', 'w'))

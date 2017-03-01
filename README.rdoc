@@ -1,6 +1,0 @@
-=== Import from CSV files
-
-== Import users
-
-<tt>rake "import:users[the_task/csv/user_data.csv]"</tt>
-
