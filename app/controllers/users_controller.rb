@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.available
+    @users = User.ordered.page(params[:page])
   end
 
   def show
-    @user = User.available.first
+    @user = User.ordered.find(params[:id])
   end
 end
