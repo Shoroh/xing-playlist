@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.ordered.find(params[:id])
+    @user = User.includes(:playlists).ordered.find(params[:id])
   end
 end
